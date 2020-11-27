@@ -8,14 +8,14 @@ public class Conditioner {
     private int maxTemp = 30;
     private boolean on;
 
-    public void increseCurrentTemp(int currentTemp) {
+    public void increseCurrentTemp() {
         if (currentTemp == maxTemp) {
             return;
         }
         this.currentTemp++;
     }
 
-    public void decreseCurrentTemp(int currentTemp) {
+    public void decreseCurrentTemp() {
         if (currentTemp == minTemp) {
             return;
         }
