@@ -22,14 +22,6 @@ public class Conditioner {
         this.currentTemp--;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getCurrentTemp() {
         return currentTemp;
     }
@@ -43,30 +35,5 @@ public class Conditioner {
         }
             this.currentTemp = currentTemp;
     }
-
-    public int getMinTemp() {
-        return minTemp;
-    }
-
-    public void setMinTemp(int minTemp) {
-        this.minTemp = minTemp;
-    }
-
-    public int getMaxTemp() {
-        return maxTemp;
-    }
-
-    public void setMaxTemp(int maxTemp) {
-        this.maxTemp = maxTemp;
-    }
-
-    public boolean isOn() {
-        return on;
-    }
-
-    public void setOn(boolean on) {
-        this.on = on;
-    }
-
 
 }
