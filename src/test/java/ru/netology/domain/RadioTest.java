@@ -29,6 +29,82 @@ public class RadioTest {
     }
 
     @Test
+    public void shouldSetNextRadioStationAndVolumeUp() {
+        Radio radio = new Radio(
+                1,
+                "HomePod",
+                5,
+                0,
+                10,
+                50,
+                0,
+                100
+        );
+
+        radio.setNextRadioStation();
+        assertEquals(6, radio.getCurrentRadioStation());
+        radio.volumeUp();
+        assertEquals(51, radio.getCurrentVolume());
+    }
+
+    @Test
+    public void shouldSetPreviousRadioStationAndVolumeDown() {
+        Radio radio = new Radio(
+                1,
+                "HomePod",
+                5,
+                0,
+                10,
+                50,
+                0,
+                100
+        );
+
+        radio.setPreviousRadioStation();
+        assertEquals(4, radio.getCurrentRadioStation());
+        radio.volumeDown();
+        assertEquals(49, radio.getCurrentVolume());
+    }
+
+    @Test
+    public void shouldSetNextRadioStationAndVolumeUpFromLastStationAndMaxVolume() {
+        Radio radio = new Radio(
+                1,
+                "HomePod",
+                10,
+                0,
+                10,
+                100,
+                0,
+                100
+        );
+
+        radio.setNextRadioStation();
+        assertEquals(0, radio.getCurrentRadioStation());
+        radio.volumeUp();
+        assertEquals(100, radio.getCurrentVolume());
+    }
+
+    @Test
+    public void shouldSetPreviousRadioStationAndVolumeDownFromFirstStationAndMinVolume() {
+        Radio radio = new Radio(
+                1,
+                "HomePod",
+                0,
+                0,
+                10,
+                0,
+                0,
+                100
+        );
+
+        radio.setPreviousRadioStation();
+        assertEquals(10, radio.getCurrentRadioStation());
+        radio.volumeDown();
+        assertEquals(0, radio.getCurrentVolume());
+    }
+
+    @Test
     public void shouldUseNoArgsConstructor() {
         Radio radio = new Radio();
         assertEquals(1, radio.getId());
@@ -58,7 +134,6 @@ public class RadioTest {
         radio.setCurrentRadioStation(-1);
         assertEquals(0, radio.getCurrentRadioStation());
     }
-
 
     @Test
     public void shouldSetNextRadioStation() {
