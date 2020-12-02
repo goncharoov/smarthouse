@@ -9,6 +9,17 @@ public class Radio {
     private int minVolume = 0;
     private int maxVolume = 100;
 
+    public Radio(){}
+
+    public Radio(int currentRadioStation, int firstRadioStation, int lastRadioStation, int currentVolume, int minVolume, int maxVolume) {
+        this.currentRadioStation = currentRadioStation;
+        this.firstRadioStation = firstRadioStation;
+        this.lastRadioStation = lastRadioStation;
+        this.currentVolume = currentVolume;
+        this.minVolume = minVolume;
+        this.maxVolume = maxVolume;
+    }
+
     public void setNextRadioStation() {
         if (currentRadioStation == lastRadioStation) {
             this.currentRadioStation = firstRadioStation;
