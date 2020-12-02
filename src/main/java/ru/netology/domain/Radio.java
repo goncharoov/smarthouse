@@ -86,7 +86,15 @@ public class Radio {
         return currentVolume;
     }
 
-    public int getId() { return id; }
+    public int getId() {  return id; }
 
     public String getName() { return name; }
+
+    public int getFirstRadioStation() { return firstRadioStation; }
+
+    public int getLastRadioStation() { return lastRadioStation; }
+
+    public int getMinVolume() { return minVolume; }
+
+    public int getMaxVolume() { return maxVolume; }
 }
