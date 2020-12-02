@@ -4,10 +4,10 @@ public class Radio {
 
     private int currentRadioStation;
     private int firstRadioStation = 0;
-    private int lastRadioStation = 9;
+    private int lastRadioStation = 10;
     private int currentVolume;
     private int minVolume = 0;
-    private int maxVolume = 10;
+    private int maxVolume = 100;
 
     public void setNextRadioStation() {
         if (currentRadioStation == lastRadioStation) {
