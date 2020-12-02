@@ -2,6 +2,8 @@ package ru.netology.domain;
 
 public class Radio {
 
+    private int id = 1;
+    private String name = "HomePod";
     private int currentRadioStation;
     private int firstRadioStation = 0;
     private int lastRadioStation = 10;
@@ -11,7 +13,9 @@ public class Radio {
 
     public Radio(){}
 
-    public Radio(int currentRadioStation, int firstRadioStation, int lastRadioStation, int currentVolume, int minVolume, int maxVolume) {
+    public Radio(int id, String name, int currentRadioStation, int firstRadioStation, int lastRadioStation, int currentVolume, int minVolume, int maxVolume) {
+        this.id = id;
+        this.name = name;
         this.currentRadioStation = currentRadioStation;
         this.firstRadioStation = firstRadioStation;
         this.lastRadioStation = lastRadioStation;
@@ -81,4 +85,8 @@ public class Radio {
     public int getCurrentVolume() {
         return currentVolume;
     }
+
+    public int getId() { return id; }
+
+    public String getName() { return name; }
 }
